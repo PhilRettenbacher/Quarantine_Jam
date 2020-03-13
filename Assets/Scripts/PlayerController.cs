@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
     public float rotationSpeed;
-
+    public Transform Body;
     Rigidbody rb;
 
     // Start is called before the first frame update
@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.AddForce(transform.forward * speed * Time.deltaTime * Input.GetAxis("Vertical"));
-        rb.rotation *= Quaternion.Euler(0, rotationSpeed * Time.deltaTime * Input.GetAxis("Horizontal"), 0);
+        rb.AddForce(Body.forward * speed * Time.deltaTime * Input.GetAxis("Vertical"));
+        Body.rotation *= Quaternion.Euler(0, rotationSpeed * Time.deltaTime * Input.GetAxis("Horizontal"), 0);
     }
 }
