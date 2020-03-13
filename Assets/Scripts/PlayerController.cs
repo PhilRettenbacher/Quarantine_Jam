@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed;
+    public float acceleration;
     public float rotationSpeed;
+    public float maxSpeed;
+    public float sideForce;
 
     Rigidbody rb;
 
@@ -18,7 +20,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.AddForce(transform.forward * speed * Time.deltaTime * Input.GetAxis("Vertical"));
+        float inputY = Input.GetAxis("Vertical");
+
+        float currAccel = (maxSpeed - rb.velocity.magnitude) / maxSpeed;
+
+        float dot = Vector3.Dot(transform.right, rb.velocity.normalized);
+
+        rb.velocity += (transform.forward * acceleration * Time.deltaTime * currAccel * inputY - transform.right*Time.deltaTime*sideForce*dot*rb.velocity.magnitude);
         rb.rotation *= Quaternion.Euler(0, rotationSpeed * Time.deltaTime * Input.GetAxis("Horizontal"), 0);
     }
 }
