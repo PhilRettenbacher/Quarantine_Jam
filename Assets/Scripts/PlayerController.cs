@@ -6,9 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     public float acceleration;
     public float rotationSpeed;
-    public float maxSpeed;
-    public float sideForce;
 
+    public Transform Body;
     Rigidbody rb;
 
     // Start is called before the first frame update
@@ -20,13 +19,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float inputY = Input.GetAxis("Vertical");
-
-        float currAccel = (maxSpeed - rb.velocity.magnitude) / maxSpeed;
-
-        float dot = Vector3.Dot(transform.right, rb.velocity.normalized);
-
-        rb.velocity += (transform.forward * acceleration * Time.deltaTime * currAccel * inputY - transform.right*Time.deltaTime*sideForce*dot*rb.velocity.magnitude);
-        rb.rotation *= Quaternion.Euler(0, rotationSpeed * Time.deltaTime * Input.GetAxis("Horizontal"), 0);
+        rb.AddForce(Body.forward * acceleration * Time.deltaTime * Input.GetAxis("Vertical"));
+        Body.rotation *= Quaternion.Euler(0, rotationSpeed * Time.deltaTime * Input.GetAxis("Horizontal"), 0);
     }
 }
