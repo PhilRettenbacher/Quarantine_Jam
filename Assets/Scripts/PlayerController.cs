@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float acceleration;
+    public float speed;
     public float rotationSpeed;
 
     public Transform Body;
@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.AddForce(Body.forward * acceleration * Time.deltaTime * Input.GetAxis("Vertical"));
+        rb.velocity=(Body.forward * speed * Input.GetAxis("Vertical"));
         Body.rotation *= Quaternion.Euler(0, rotationSpeed * Time.deltaTime * Input.GetAxis("Horizontal"), 0);
     }
 }
