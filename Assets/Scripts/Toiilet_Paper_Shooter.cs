@@ -7,13 +7,13 @@ public class Toiilet_Paper_Shooter : MonoBehaviour
     // Start is called before the first frame update
 
     public GameObject PlayerView;
-    CartInventory inventory;
+    ToiletPaperInventory inventory;
     //public Transform Hand;
     public GameObject Bullet;
     public float distance;
     void Start()
     {
-        inventory = gameObject.GetComponent<CartInventory>();
+        inventory = gameObject.GetComponent<ToiletPaperInventory>();
     }
 
 
