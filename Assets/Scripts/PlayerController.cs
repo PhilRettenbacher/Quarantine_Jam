@@ -24,8 +24,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.LeftShift) && !Shift)
+        if(Input.GetKey(KeyCode.LeftShift) && Stamina >0)
         {
+            Stamina -= 5 * Time.deltaTime;
             Shift = true;
             Player.speed = 2;
             speed = 40;
@@ -57,6 +58,7 @@ public class PlayerController : MonoBehaviour
     {
         if(!elab)
         {
+            elab = true;
             float i = 0;
             while (!Input.GetKey(KeyCode.LeftShift))
             {
