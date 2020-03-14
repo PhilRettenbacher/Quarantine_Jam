@@ -23,7 +23,7 @@ public class Camera_Rotation : MonoBehaviour
         //Mx = Mathf.Clamp(Mx,Body.rotation.y -20)
         My = Mathf.Clamp(My, Min_Rotation_Y, Max_Rotation_Y);
 
-        transform.rotation = Quaternion.Euler(My * Sensivity, Body.rotation.y + (Mx * Sensivity) , 0);
+        transform.rotation = Quaternion.Euler(My * Sensivity, Body.rotation.eulerAngles.y + (Mx * Sensivity) , 0);
         
     }
 }

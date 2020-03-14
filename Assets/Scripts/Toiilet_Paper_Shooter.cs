@@ -7,13 +7,14 @@ public class Toiilet_Paper_Shooter : MonoBehaviour
     // Start is called before the first frame update
 
     public GameObject PlayerView;
+    CartInventory inventory;
     //public Transform Hand;
     public GameObject Bullet;
     public float ammo;
     public float distance;
     void Start()
     {
-        
+        inventory = gameObject.GetComponent<CartInventory>();
     }
 
     // Update is called once per frame
@@ -21,9 +22,9 @@ public class Toiilet_Paper_Shooter : MonoBehaviour
     {
         Debug.DrawRay(PlayerView.transform.position, PlayerView.transform.forward * distance, Color.green);
 
-        if (Input.GetMouseButtonDown(0) && ammo >0)
+        if (Input.GetMouseButtonDown(0) && inventory.count >0)
         {
-            ammo--;
+            inventory.Remove(1);
             GameObject B = Instantiate(Bullet, PlayerView.transform.position, Quaternion.identity);
             Rigidbody bullet = B.GetComponent<Rigidbody>();
             bullet.AddForce(PlayerView.transform.forward * 1200);
