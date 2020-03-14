@@ -26,15 +26,15 @@ public class Grab_Object : MonoBehaviour
         {
             Debug.DrawRay(transform.position, transform.forward * 100, Color.blue);
             RaycastHit Object;
-            if (Physics.Raycast(transform.position, transform.forward, out Object, 10f))
+            if (Physics.Raycast(transform.position, transform.forward, out Object, 20f))
             {
                 if(Object.collider.gameObject.tag != "Player")
                 {
                     take = true;
-                    Debug.DrawRay(transform.position, transform.forward * 10, Color.red);
+                    Debug.DrawRay(transform.position, transform.forward * 20, Color.red);
                     Temp = Object.collider.gameObject;
                     Tobj = Temp.GetComponent<Rigidbody>();
-                    if (Tobj)
+                    if (Tobj && Object.collider.gameObject.tag == "Takable")
                     {
                         Tobj.useGravity = false;
                         Temp.transform.parent = Point;
@@ -56,6 +56,10 @@ public class Grab_Object : MonoBehaviour
             }
             Temp = null;
             Tobj = null;
+        }
+        if(take)
+        {
+            Temp.transform.position = Point.position;
         }
     }
 }

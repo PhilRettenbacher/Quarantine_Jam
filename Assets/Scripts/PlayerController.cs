@@ -32,14 +32,14 @@ public class PlayerController : MonoBehaviour
             Stamina -= 20 * Time.deltaTime;
             Shift = true;
             Player.speed = 2;
-            speed = 40;
+            speed = 80;
         }
         else if(!Input.GetKey(KeyCode.LeftShift) && Shift)
         {
-            StartCoroutine(Stamina_Wait());
             Shift = false;
+            StartCoroutine(Stamina_Wait());
             Player.speed = 1;
-            speed = 20;
+            speed = 40;
         }
 
         if(Input.GetAxis("Vertical") != 0)
@@ -63,12 +63,16 @@ public class PlayerController : MonoBehaviour
         {
             elab = true;
             float i = 0;
-            while (!Input.GetKey(KeyCode.LeftShift))
+            //Debug.Log("Im going to Wait");
+            while (!Shift)
             {
+                //Debug.Log("Turn:" + i);
                 yield return new WaitForSeconds(0.1f);
                 i += 0.1f;
-                if(i == 5)
+
+                if(i >= 5)
                 {
+                    Debug.Log("DONE");
                     done = true;
                     break;
 
@@ -76,6 +80,7 @@ public class PlayerController : MonoBehaviour
             }
             if (done)
             {
+                //Debug.Log("Im going to reload");
                 StartCoroutine(Stamina_Reload());
             }
             else
@@ -86,10 +91,11 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Stamina_Reload()
     {
-        while(!Input.GetKey(KeyCode.LeftShift))
+        while(!Shift)
         {
+            Debug.Log("reload");
             yield return new WaitForSeconds(0.1f);
-            Stamina += (Max_Stamina * 0.1f);
+            Stamina += (Max_Stamina * 0.01f);
             if (Stamina >= Max_Stamina)
                 break;
         }
