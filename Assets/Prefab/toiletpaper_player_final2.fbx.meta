@@ -1,8 +1,26 @@
 fileFormatVersion: 2
-guid: c34d1c8edd5f4a348bb3901072947fdb
+guid: fb609ab91cad52d48a138fd9a623bdab
 ModelImporter:
   serializedVersion: 19300
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -7918129362319027497
+    second: Cube|CubeAction.001
+  - first:
+      74: 8558458877805361986
+    second: Cube|idle
+  - first:
+      74: 8340758560812030231
+    second: Cube|WalkCycle
+  - first:
+      74: 783080663221867442
+    second: Armature|CubeAction.001
+  - first:
+      74: -1978303741906493279
+    second: Armature|idle
+  - first:
+      74: 2517152770028793317
+    second: Armature|WalkCycle
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -23,7 +41,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -83,13 +101,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

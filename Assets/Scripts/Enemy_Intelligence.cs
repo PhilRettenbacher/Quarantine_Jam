@@ -25,7 +25,7 @@ public class Enemy_Intelligence : MonoBehaviour
             Destroy(gameObject);
 
         }
-        if(collision.gameObject.tag=="Player" && gameObject.tag == "Weapon")
+        if(collision.gameObject.tag=="Takable" && gameObject.tag == "Weapon")
         {
             Find = !Find
 ;        }
@@ -129,7 +129,7 @@ public class Enemy_Intelligence : MonoBehaviour
             Enemy.SetDestination(Position[i].position);
             if (Enemy.remainingDistance < 2f)
             {
-                i = Random.Range(0, 12);
+                i = Random.Range(0, 7);
             }
 
         }

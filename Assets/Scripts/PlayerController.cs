@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public GameObject Character;
     Animator Player;
     public Transform Body;
-    bool run = false;
+    bool run = false, Shift = false;
     Rigidbody rb;
 
     // Start is called before the first frame update
@@ -22,7 +22,18 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKey(KeyCode.LeftShift) && !Shift)
+        {
+            Shift = true;
+            Player.speed = 2;
+            speed = 40;
+        }
+        else if(!Input.GetKey(KeyCode.LeftShift) && Shift)
+        {
+            Shift = false;
+            Player.speed = 1;
+            speed = 20;
+        }
 
         if(Input.GetAxis("Vertical") != 0)
         {
