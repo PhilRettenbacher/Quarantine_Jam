@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         
 
@@ -35,6 +35,6 @@ public class PlayerController : MonoBehaviour
             Player.SetBool("Run", run);
         }
         rb.velocity = (Body.forward * speed * Input.GetAxis("Vertical"));
-        Body.rotation *= Quaternion.Euler(0, rotationSpeed * Time.deltaTime * Input.GetAxis("Horizontal"), 0);
+        rb.rotation *= Quaternion.Euler(0, rotationSpeed * Time.fixedDeltaTime * Input.GetAxis("Horizontal"), 0);
     }
 }
