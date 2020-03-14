@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CartInventory : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class CartInventory : MonoBehaviour
     List<GameObject> currentInventory = new List<GameObject>();
     public Transform container;
     public Vector3 scaling;
+    public TextMeshProUGUI pointText;
 
     public int count { get => currentInventory.Count; }
 
@@ -41,6 +43,7 @@ public class CartInventory : MonoBehaviour
             currentInventory[idx].transform.localPosition = new Vector3((widthPos-(maxWidth-1)/2f)*scaling.x, height*scaling.y, lengthPos*scaling.z);
 
         }
+        pointText.text = "Points: " + this.count;
     }
     public void Remove(int count)
     {
@@ -50,5 +53,6 @@ public class CartInventory : MonoBehaviour
             Destroy(currentInventory[idx]);
             currentInventory.RemoveAt(idx);
         }
+        pointText.text = "Points: " + this.count;
     }
 }
