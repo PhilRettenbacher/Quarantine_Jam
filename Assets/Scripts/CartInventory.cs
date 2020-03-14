@@ -1,27 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 using TMPro;
 
 public class CartInventory : MonoBehaviour
 {
-    public GameObject tpPrefab;
-    List<GameObject> currentInventory = new List<GameObject>();
-    public Transform container;
-    public Vector3 scaling;
-    public TextMeshProUGUI pointText;
+    public List<Item> items = new List<Item>();
+    public float score { get; private set; }
 
-    public int count { get => currentInventory.Count; }
-
-    //the gridsize in which the toilet paper should be stacked
-    public int maxWidth;
-    public int maxLength;
-
+    public TextMeshProUGUI scoreText;
     // Start is called before the first frame update
     void Start()
     {
-        //Test
-        //Add(50);
+        
     }
 
     // Update is called once per frame
@@ -29,31 +21,28 @@ public class CartInventory : MonoBehaviour
     {
         
     }
-    public void Add(int count/*,GameObject obj*/)
+
+    public void AddItem(Item item)
     {
-        int currCount = currentInventory.Count;
-        for(int i = 0; i<count; i++)
+        if(!items.Contains(item))
         {
-            int idx = i + currCount;
-            //tpPrefab = obj;
-            currentInventory.Add(Instantiate(tpPrefab, container));
-            int widthPos = idx % maxWidth;
-            int lengthPos = Mathf.FloorToInt(idx / maxWidth) % maxLength;
-            int height = Mathf.FloorToInt(idx / (maxWidth * maxLength));
-
-            currentInventory[idx].transform.localPosition = new Vector3((widthPos-(maxWidth-1)/2f)*scaling.x, height*scaling.y, lengthPos*scaling.z);
-
+            items.Add(item);
+            Debug.Log("Added " + item.itemName + " to cart!");
+            RecalculateScore();
         }
-        pointText.text = "Points: " + this.count;
     }
-    public void Remove(int count)
+    public void RemoveItem(Item item)
     {
-        for(int i = 0; i<count; i++)
+        if(items.Contains(item))
         {
-            int idx = this.count - i - 1;
-            Destroy(currentInventory[idx]);
-            currentInventory.RemoveAt(idx);
+            items.Remove(item);
+            Debug.Log("Removed " + item.itemName + " from cart!");
+            RecalculateScore();
         }
-        pointText.text = "Points: " + this.count;
+    }
+    void RecalculateScore()
+    {
+        score = items.Sum(x => x.score);
+        scoreText.text = "Points: " + score;
     }
 }

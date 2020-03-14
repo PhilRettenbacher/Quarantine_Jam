@@ -10,7 +10,9 @@ public class PlayerController : MonoBehaviour
     public float Max_Stamina, Stamina;
     Animator Player;
     public Transform Body;
+
     bool run = false, Shift = false,elab = false,done=false;
+
     Rigidbody rb;
 
     // Start is called before the first frame update
@@ -22,11 +24,12 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+
         if(Input.GetKey(KeyCode.LeftShift) && Stamina >0)
         {
-            Stamina -= 5 * Time.deltaTime;
+            Stamina -= 20 * Time.deltaTime;
             Shift = true;
             Player.speed = 2;
             speed = 40;
@@ -50,7 +53,7 @@ public class PlayerController : MonoBehaviour
             Player.SetBool("Run", run);
         }
         rb.velocity = (Body.forward * speed * Input.GetAxis("Vertical"));
-        Body.rotation *= Quaternion.Euler(0, rotationSpeed * Time.deltaTime * Input.GetAxis("Horizontal"), 0);
+        rb.rotation *= Quaternion.Euler(0, rotationSpeed * Time.fixedDeltaTime * Input.GetAxis("Horizontal"), 0);
     }
 
 

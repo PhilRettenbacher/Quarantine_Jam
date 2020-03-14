@@ -294,6 +294,7 @@ GameObject:
   - component: {fileID: 1800024717422965815}
   - component: {fileID: 862108380514001919}
   - component: {fileID: 721635335655247181}
+  - component: {fileID: -6316113988921136381}
   m_Layer: 0
   m_Name: Tv
   m_TagString: Collectible
@@ -333,7 +334,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &1800024717422965815
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -345,7 +346,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.0451493, y: 2.5691385, z: 0.20809756}
+  m_Size: {x: 4.0451493, y: 2.5691385, z: 1.15}
   m_Center: {x: 0.0012090206, y: 0.309726, z: 0.002463095}
 --- !u!136 &862108380514001919
 CapsuleCollider:
@@ -372,5 +373,19 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.0180163, y: 0.10491276, z: 1.7116945}
-  m_Center: {x: -0.009125233, y: -1.7984238, z: -0.40354693}
+  m_Size: {x: 3.0180163, y: 0.82, z: 1.98}
+  m_Center: {x: -0.009125233, y: -1.4, z: -0.22}
+--- !u!114 &-6316113988921136381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6121288390130469655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c68231b4f85daf4cafc948f50ec8893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 100
+  itemName: Monitor

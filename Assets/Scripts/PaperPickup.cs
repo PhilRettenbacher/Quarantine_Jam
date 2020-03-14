@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PaperPickup : MonoBehaviour
 {
-    public CartInventory inventory;
+    public ToiletPaperInventory inventory;
 
     private void OnTriggerEnter(Collider other)
     {
