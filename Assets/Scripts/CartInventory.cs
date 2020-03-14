@@ -27,12 +27,13 @@ public class CartInventory : MonoBehaviour
     {
         
     }
-    public void Add(int count)
+    public void Add(int count/*,GameObject obj*/)
     {
         int currCount = currentInventory.Count;
         for(int i = 0; i<count; i++)
         {
             int idx = i + currCount;
+            //tpPrefab = obj;
             currentInventory.Add(Instantiate(tpPrefab, container));
             int widthPos = idx % maxWidth;
             int lengthPos = Mathf.FloorToInt(idx / maxWidth) % maxLength;

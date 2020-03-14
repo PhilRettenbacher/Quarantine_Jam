@@ -10,12 +10,13 @@ public class Toiilet_Paper_Shooter : MonoBehaviour
     CartInventory inventory;
     //public Transform Hand;
     public GameObject Bullet;
-    public float ammo;
     public float distance;
     void Start()
     {
         inventory = gameObject.GetComponent<CartInventory>();
     }
+
+
 
     // Update is called once per frame
     void Update()
@@ -27,13 +28,10 @@ public class Toiilet_Paper_Shooter : MonoBehaviour
             inventory.Remove(1);
             GameObject B = Instantiate(Bullet, PlayerView.transform.position, Quaternion.identity);
             Rigidbody bullet = B.GetComponent<Rigidbody>();
+            bullet.tag = "Collectible";
             bullet.AddForce(PlayerView.transform.forward * 1200);
-            Destroy(B, 5f);
+          //Destroy(B, 5f);
 
         }
-
-
-
-        
     }
 }

@@ -1,19 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!136 &2877502769649077568
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7988832114690860781}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &8806166971830944301
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -30,6 +16,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &2877502769649077568
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988832114690860781}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2161698603019468772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96,6 +96,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ToiletPaperCollectible
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 167b9c9d3fcf7154d8c4a480d1dbd080,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectible
       objectReference: {fileID: 0}
     - target: {fileID: -836435644538551948, guid: 167b9c9d3fcf7154d8c4a480d1dbd080,
         type: 3}

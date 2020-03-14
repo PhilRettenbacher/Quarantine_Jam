@@ -10,7 +10,7 @@ public class PaperPickup : MonoBehaviour
     {
         if (other.transform.root.gameObject.tag == "Collectible")
         {
-            inventory.Add(1);
+            inventory.Add(1/*,other.gameObject*/);
             Destroy(other.transform.root.gameObject);
         }
     }
