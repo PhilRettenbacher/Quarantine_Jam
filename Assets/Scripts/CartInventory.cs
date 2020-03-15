@@ -7,7 +7,7 @@ using TMPro;
 public class CartInventory : MonoBehaviour
 {
     public List<Item> items = new List<Item>();
-    public float score { get; private set; }
+    public int score { get; private set; }
 
     public TextMeshProUGUI scoreText;
     // Start is called before the first frame update
