@@ -71,6 +71,7 @@ public class Checkout : MonoBehaviour
         handler.label.text = "Highscores";
         handler.buttonHighscore.SetActive(false);
         handler.buttonMainMenu.SetActive(true);
+        handler.highScoreInput.SetActive(false);
         foreach(Transform child in handler.listObj.transform)
         {
             Destroy(child.gameObject);

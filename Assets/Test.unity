@@ -11360,6 +11360,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: InitShowHighscore
       objectReference: {fileID: 0}
+    - target: {fileID: 1057236897758736646, guid: 4fb47d6469351fa4e8ab938f6b7eb84c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 536817974}
+    - target: {fileID: 1057236897758736646, guid: 4fb47d6469351fa4e8ab938f6b7eb84c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UploadHighscore
+      objectReference: {fileID: 0}
     - target: {fileID: 1057236898129152203, guid: 4fb47d6469351fa4e8ab938f6b7eb84c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
