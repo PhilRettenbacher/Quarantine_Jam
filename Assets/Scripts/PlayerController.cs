@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     public float speed;
     public float rotationSpeed;
+    public Canvas HUD, PAUSE;
     public GameObject Character;
     public float Max_Stamina, Stamina;
+    bool pause = false;
     Animator Player;
     public Transform Body;
 
@@ -18,6 +21,9 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        HUD.gameObject.SetActive(true);
+        PAUSE.gameObject.SetActive(false);
+
         Stamina = Max_Stamina;
         rb = gameObject.GetComponent<Rigidbody>();
         Player = Character.GetComponent<Animator>();
@@ -26,8 +32,18 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            
+            HUD.gameObject.SetActive(false);
+            PAUSE.gameObject.SetActive(true);
+            Cursor.visible = true;
+            Time.timeScale = 0;
+            
+        }
+        
 
-        if(Input.GetKey(KeyCode.LeftShift) && Stamina >0)
+        if (Input.GetKey(KeyCode.LeftShift) && Stamina >0)
         {
             Stamina -= 20 * Time.deltaTime;
             Shift = true;

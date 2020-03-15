@@ -30,20 +30,35 @@ public class Grab_Object : MonoBehaviour
             {
                 if(Object.collider.gameObject.tag != "Player")
                 {
-                    take = true;
-                    Debug.DrawRay(transform.position, transform.forward * 20, Color.red);
-                    Temp = Object.collider.gameObject;
-                    Tobj = Temp.GetComponent<Rigidbody>();
-                    if (Tobj && Object.collider.gameObject.tag == "Takable")
+                    
+                    if (Object.collider.gameObject.tag == "Takable")
                     {
-                        Tobj.useGravity = false;
-                        Temp.transform.parent = Point;
-                        Temp.transform.position = Point.position;
+                        take = true;
+                        Debug.DrawRay(transform.position, transform.forward * 20, Color.red);
+                        Temp = Object.collider.gameObject;
+                        Tobj = Temp.GetComponent<Rigidbody>();
+                        if(Tobj)
+                        {
+                            Tobj.useGravity = false;
+                            Temp.transform.parent = Point;
+                            Temp.transform.position = Point.position;
+                        }
+                        
                     }
                 }
                 
                 
             }
+        }
+        if(take && Input.GetMouseButtonDown(0))
+        {
+            
+            Temp.transform.parent = null;
+            Tobj.AddForce(transform.forward * 20000);
+            Tobj.AddForce(Vector3.up * 450);
+            Tobj.useGravity = true;
+            take = false;
+
         }
         else if (Input.GetMouseButtonUp(1) && take)
         {
