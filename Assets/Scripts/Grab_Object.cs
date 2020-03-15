@@ -24,7 +24,7 @@ public class Grab_Object : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1) && !take)
         {
-            Debug.DrawRay(transform.position, transform.forward * 100, Color.blue);
+            Debug.DrawRay(transform.position, transform.forward * 20, Color.blue);
             RaycastHit Object;
             if (Physics.Raycast(transform.position, transform.forward, out Object, 20f))
             {
