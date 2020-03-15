@@ -2025,7 +2025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerStarted: 0
-  maxTime: 10
+  maxTime: 50
   countDownText: {fileID: 1321909383}
 --- !u!114 &536817974
 MonoBehaviour:
