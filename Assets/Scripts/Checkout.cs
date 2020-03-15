@@ -10,8 +10,9 @@ public class Checkout : MonoBehaviour
     public void GenerateReceipt()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<CartInventory>();
-        var receipt = Instantiate(receiptUI);
-        ReceiptHandler handler = receipt.GetComponent<ReceiptHandler>();
+        //var receipt = Instantiate(receiptUI);
+        receiptUI.SetActive(true);
+        ReceiptHandler handler = receiptUI.GetComponent<ReceiptHandler>();
         for(int i = 0; i<ItemList.instance.itemPrefabs.Count;i++)
         {
             Item currItem = ItemList.instance.itemPrefabs[i].GetComponent<Item>();
