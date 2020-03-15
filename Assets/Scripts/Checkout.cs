@@ -9,12 +9,14 @@ public class Checkout : MonoBehaviour
     public GameObject receiptUI;
     public void GenerateReceipt()
     {
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<CartInventory>();
         var receipt = Instantiate(receiptUI);
         ReceiptHandler handler = receipt.GetComponent<ReceiptHandler>();
         for(int i = 0; i<ItemList.instance.itemPrefabs.Count;i++)
         {
             Item currItem = ItemList.instance.itemPrefabs[i].GetComponent<Item>();
             Time.timeScale = 0;
+            Debug.Log(inventory);
             int count = inventory.items.Where(x => x.itemName == currItem.itemName).Count();
 
             Debug.Log(currItem.itemName + " : " + count);
@@ -35,12 +37,12 @@ public class Checkout : MonoBehaviour
         entry1.itemAmount.text = inventory.score + ",-";
         entry1.itemAmount.fontStyle = TMPro.FontStyles.Bold;
     }
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         if(other.transform.root.tag=="Player")
         {
-            inventory = other.transform.root.gameObject.GetComponent<CartInventory>();
+            
             GenerateReceipt();
         }
-    }
+    }*/
 }
