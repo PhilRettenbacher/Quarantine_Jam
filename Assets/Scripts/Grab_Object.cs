@@ -50,6 +50,16 @@ public class Grab_Object : MonoBehaviour
                 
             }
         }
+        if(take && Input.GetMouseButtonDown(0))
+        {
+            
+            Temp.transform.parent = null;
+            Tobj.AddForce(transform.forward * 20000);
+            Tobj.AddForce(Vector3.up * 450);
+            Tobj.useGravity = true;
+            take = false;
+
+        }
         else if (Input.GetMouseButtonUp(1) && take)
         {
             take = false;
