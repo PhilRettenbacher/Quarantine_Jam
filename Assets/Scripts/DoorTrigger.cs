@@ -6,10 +6,11 @@ public class DoorTrigger : MonoBehaviour
 {
     public Timer timer;
     public Checkout checkout;
+    Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = gameObject.GetComponent<Animator>();   
     }
 
     // Update is called once per frame
@@ -21,6 +22,7 @@ public class DoorTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            anim.SetBool("DoorOpen", true);
             Debug.Log(timer.timerStarted);
             if (!timer.timerStarted)
                 timer.StartTimer();
@@ -31,6 +33,13 @@ public class DoorTrigger : MonoBehaviour
             }
             //inventory = other.transform.root.gameObject.GetComponent<CartInventory>();
             //GenerateReceipt();
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            anim.SetBool("DoorOpen", false);
         }
     }
 }
