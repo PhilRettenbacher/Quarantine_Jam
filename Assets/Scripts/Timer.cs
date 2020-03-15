@@ -9,11 +9,14 @@ public class Timer : MonoBehaviour
     public float maxTime;
     float currTime;
     public TextMeshProUGUI countDownText;
+    Checkout checkout;
     // Start is called before the first frame update
     void Start()
     {
         //Test
         //StartTimer();
+        countDownText.gameObject.SetActive(false);
+        checkout = gameObject.GetComponent<Checkout>();
     }
 
     // Update is called once per frame
@@ -27,6 +30,8 @@ public class Timer : MonoBehaviour
                 //End game -> loose
                 timerStarted = false;
                 currTime = 0;
+                countDownText.gameObject.SetActive(false);
+                checkout.ShowGameOver();
             }
             countDownText.text = ((int)currTime).ToString();
         }
@@ -36,10 +41,13 @@ public class Timer : MonoBehaviour
     {
         timerStarted = true;
         currTime = maxTime;
+        countDownText.gameObject.SetActive(true);
     }
     public void EndTimer()
     {
         timerStarted = false;
         //Checkout -> Receipt
+        countDownText.gameObject.SetActive(false);
+
     }
 }
