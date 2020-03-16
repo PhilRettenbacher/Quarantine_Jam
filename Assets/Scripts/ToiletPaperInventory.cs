@@ -34,7 +34,7 @@ public class ToiletPaperInventory : MonoBehaviour
 
     public void AddItem(Item item)
     {
-        if (!items.Contains(item)) ;
+        if (!items.Contains(item));
 
     }
     public void RemoveItem(Item item)

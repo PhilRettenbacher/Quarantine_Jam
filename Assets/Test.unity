@@ -2223,6 +2223,7 @@ MonoBehaviour:
   timerStarted: 0
   maxTime: 50
   countDownText: {fileID: 1663128599}
+  slider: {fileID: 1354980198}
 --- !u!114 &536817974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6714,6 +6715,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1350728788}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1354980198 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4500405802015994451, guid: ddb27fef7f422064481491b54636b9a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1663128596}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1355439856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11580,7 +11593,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 956190522}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be07748bcc619f749858073349a1348e, type: 3}
 --- !u!1001 &6624497517137001701
