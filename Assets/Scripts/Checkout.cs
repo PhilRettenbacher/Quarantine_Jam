@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class Checkout : MonoBehaviour
 {
-    CartInventory inventory;
+    public CartInventory inventory;
     public GameObject receiptUI;
     public TMP_InputField highscoreInput;
     Highscores highscore;
