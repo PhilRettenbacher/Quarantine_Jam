@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Timer : MonoBehaviour
     public float maxTime;
     float currTime;
     public TextMeshProUGUI countDownText;
+    public Slider slider;
     Checkout checkout;
     // Start is called before the first frame update
     void Start()
@@ -34,6 +36,7 @@ public class Timer : MonoBehaviour
                 checkout.ShowGameOver();
             }
             countDownText.text = ((int)currTime).ToString();
+            slider.value = currTime;
         }
     }
 
@@ -42,12 +45,15 @@ public class Timer : MonoBehaviour
         timerStarted = true;
         currTime = maxTime;
         countDownText.gameObject.SetActive(true);
+        slider.gameObject.SetActive(true);
+        slider.maxValue = maxTime;
     }
     public void EndTimer()
     {
         timerStarted = false;
         //Checkout -> Receipt
         countDownText.gameObject.SetActive(false);
+        slider.gameObject.SetActive(false);
 
     }
 }
