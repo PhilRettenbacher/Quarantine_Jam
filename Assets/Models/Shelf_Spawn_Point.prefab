@@ -106,7 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartPoint: {fileID: 7219601108680162656}
   EndPoint: {fileID: 6671054181796149703}
-  itemsPerUnit: 0.1
+  itemsPerUnit: 0.2
   randomize: 1
   rotation: 0
   probability: 1
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartPoint: {fileID: 7948988512321659943}
   EndPoint: {fileID: 8642414433579430250}
-  itemsPerUnit: 0.1
+  itemsPerUnit: 0.2
   randomize: 1
   rotation: 0
   probability: 1
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartPoint: {fileID: 612631177046361967}
   EndPoint: {fileID: 996593678898106271}
-  itemsPerUnit: 0.1
+  itemsPerUnit: 0.2
   randomize: 1
   rotation: 0
   probability: 1
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartPoint: {fileID: 8577804999254614959}
   EndPoint: {fileID: 3070767741412748423}
-  itemsPerUnit: 0.1
+  itemsPerUnit: 0.2
   randomize: 1
   rotation: 0
   probability: 1
