@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RandomList : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class RandomList : MonoBehaviour
         for (i=0;i<HaveToTake.Length;i++)
         {
             ObjectName[i] = HaveToTake[i].GetComponent<Item>();
+            Name[i] = ObjectName[i].ReturnName(); 
         }
     }
 

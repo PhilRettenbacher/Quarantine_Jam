@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1082040687}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2004,7 +2004,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7d6a51dbe1dd17f49bd1aef5511103cf, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f42510248fb98be489c2ccc6c2f851dd, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.403
   m_Pitch: 1
@@ -2223,7 +2223,6 @@ MonoBehaviour:
   timerStarted: 0
   maxTime: 50
   countDownText: {fileID: 1663128599}
-  slider: {fileID: 1663128598}
 --- !u!114 &536817974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8693,18 +8692,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1663128598 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4500405802015994451, guid: ddb27fef7f422064481491b54636b9a1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1663128596}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1663128599 stripped

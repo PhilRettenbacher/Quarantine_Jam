@@ -6,4 +6,9 @@ public class Item : MonoBehaviour
 {
     public int score;
     public string itemName;
+
+    public string ReturnName()
+    {
+        return itemName;
+    }
 }
