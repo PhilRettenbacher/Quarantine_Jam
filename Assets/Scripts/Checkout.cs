@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class Checkout : MonoBehaviour
 {
+    public RandomList list;
     public CartInventory inventory;
     public GameObject receiptUI;
     public TMP_InputField highscoreInput;
@@ -20,6 +21,13 @@ public class Checkout : MonoBehaviour
         highscore = gameObject.GetComponent<Highscores>();
     }
 
+    public void Endgame()
+    {
+        if (list.EvaluateFinished())
+            GenerateReceipt();
+        else
+            ShowGameOver();
+    }
     public void GenerateReceipt()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<CartInventory>();

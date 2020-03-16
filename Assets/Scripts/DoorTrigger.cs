@@ -30,7 +30,7 @@ public class DoorTrigger : MonoBehaviour
             else
             {
                 timer.EndTimer();
-                checkout.GenerateReceipt();
+                checkout.Endgame();
             }
             //inventory = other.transform.root.gameObject.GetComponent<CartInventory>();
             //GenerateReceipt();
