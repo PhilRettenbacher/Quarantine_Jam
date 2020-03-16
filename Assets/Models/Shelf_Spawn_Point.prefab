@@ -109,6 +109,7 @@ MonoBehaviour:
   itemsPerUnit: 0.1
   randomize: 1
   rotation: 0
+  probability: 1
   itemId: 0
 --- !u!1 &5227112435007927378
 GameObject:
@@ -159,6 +160,7 @@ MonoBehaviour:
   itemsPerUnit: 0.1
   randomize: 1
   rotation: 0
+  probability: 1
   itemId: 0
 --- !u!1 &5775838675044488718
 GameObject:
@@ -303,6 +305,7 @@ MonoBehaviour:
   itemsPerUnit: 0.1
   randomize: 1
   rotation: 0
+  probability: 1
   itemId: 0
 --- !u!1 &8898465036091318257
 GameObject:
@@ -353,4 +356,5 @@ MonoBehaviour:
   itemsPerUnit: 0.1
   randomize: 1
   rotation: 0
+  probability: 1
   itemId: 0

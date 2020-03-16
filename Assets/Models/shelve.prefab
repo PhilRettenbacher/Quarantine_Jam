@@ -103,6 +103,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4504008916838077695}
     m_Modifications:
+    - target: {fileID: 560267453031338189, guid: 3042fcaa45cc0824d85ed78775a5b589,
+        type: 3}
+      propertyPath: probability
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096388572505964238, guid: 3042fcaa45cc0824d85ed78775a5b589,
+        type: 3}
+      propertyPath: probability
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235766620244415512, guid: 3042fcaa45cc0824d85ed78775a5b589,
+        type: 3}
+      propertyPath: probability
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5920647136349629201, guid: 3042fcaa45cc0824d85ed78775a5b589,
         type: 3}
       propertyPath: m_Name
@@ -163,6 +178,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6921700394606659594, guid: 3042fcaa45cc0824d85ed78775a5b589,
+        type: 3}
+      propertyPath: probability
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3042fcaa45cc0824d85ed78775a5b589, type: 3}
 --- !u!4 &4929750577348781372 stripped
@@ -178,6 +198,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4504008916838077695}
     m_Modifications:
+    - target: {fileID: 560267453031338189, guid: 3042fcaa45cc0824d85ed78775a5b589,
+        type: 3}
+      propertyPath: probability
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096388572505964238, guid: 3042fcaa45cc0824d85ed78775a5b589,
+        type: 3}
+      propertyPath: probability
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235766620244415512, guid: 3042fcaa45cc0824d85ed78775a5b589,
+        type: 3}
+      propertyPath: probability
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5920647136349629201, guid: 3042fcaa45cc0824d85ed78775a5b589,
         type: 3}
       propertyPath: m_Name
@@ -237,6 +272,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6921700394606659594, guid: 3042fcaa45cc0824d85ed78775a5b589,
+        type: 3}
+      propertyPath: probability
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3042fcaa45cc0824d85ed78775a5b589, type: 3}

@@ -10,14 +10,15 @@ public class Light_Settings : MonoBehaviour
     void Start()
     {
         al = GetComponent<Light>();
+        al.range = Range;
+        al.intensity = Intensity;
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        al.range = Range;
-        al.intensity = Intensity;
+        
         
     }
 }
