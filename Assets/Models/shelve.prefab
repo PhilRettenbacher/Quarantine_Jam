@@ -118,6 +118,11 @@ PrefabInstance:
       propertyPath: randomize
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 560267453031338189, guid: 3042fcaa45cc0824d85ed78775a5b589,
+        type: 3}
+      propertyPath: itemId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3096388572505964238, guid: 3042fcaa45cc0824d85ed78775a5b589,
         type: 3}
       propertyPath: probability
@@ -136,6 +141,11 @@ PrefabInstance:
     - target: {fileID: 5235766620244415512, guid: 3042fcaa45cc0824d85ed78775a5b589,
         type: 3}
       propertyPath: randomize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235766620244415512, guid: 3042fcaa45cc0824d85ed78775a5b589,
+        type: 3}
+      propertyPath: itemId
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5920647136349629201, guid: 3042fcaa45cc0824d85ed78775a5b589,
@@ -213,6 +223,11 @@ PrefabInstance:
       propertyPath: randomize
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6921700394606659594, guid: 3042fcaa45cc0824d85ed78775a5b589,
+        type: 3}
+      propertyPath: itemId
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3042fcaa45cc0824d85ed78775a5b589, type: 3}
 --- !u!4 &4929750577348781372 stripped
@@ -243,6 +258,11 @@ PrefabInstance:
       propertyPath: randomize
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 560267453031338189, guid: 3042fcaa45cc0824d85ed78775a5b589,
+        type: 3}
+      propertyPath: itemId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3096388572505964238, guid: 3042fcaa45cc0824d85ed78775a5b589,
         type: 3}
       propertyPath: probability
@@ -261,6 +281,11 @@ PrefabInstance:
     - target: {fileID: 5235766620244415512, guid: 3042fcaa45cc0824d85ed78775a5b589,
         type: 3}
       propertyPath: randomize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235766620244415512, guid: 3042fcaa45cc0824d85ed78775a5b589,
+        type: 3}
+      propertyPath: itemId
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5920647136349629201, guid: 3042fcaa45cc0824d85ed78775a5b589,
@@ -336,6 +361,11 @@ PrefabInstance:
     - target: {fileID: 6921700394606659594, guid: 3042fcaa45cc0824d85ed78775a5b589,
         type: 3}
       propertyPath: randomize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6921700394606659594, guid: 3042fcaa45cc0824d85ed78775a5b589,
+        type: 3}
+      propertyPath: itemId
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

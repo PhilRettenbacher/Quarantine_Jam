@@ -7,6 +7,7 @@ public class DoorTrigger : MonoBehaviour
     public Timer timer;
     public Checkout checkout;
     Animator anim;
+    
     // Start is called before the first frame update
     void Start()
     {
