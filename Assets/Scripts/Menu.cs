@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    public PlayerController a;
+    bool p = false;
     // Start is called before the first frame update
     void Start()
     {
