@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 70
-  itemName: Bottole
+  itemName: Bottle
 --- !u!54 &2393442750567045859
 Rigidbody:
   m_ObjectHideFlags: 0

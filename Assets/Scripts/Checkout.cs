@@ -19,10 +19,12 @@ public class Checkout : MonoBehaviour
     private void Awake()
     {
         highscore = gameObject.GetComponent<Highscores>();
+        Cursor.visible = false;
     }
 
     public void Endgame()
     {
+        Cursor.visible = true;
         if (list.EvaluateFinished())
             GenerateReceipt();
         else

@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c68231b4f85daf4cafc948f50ec8893, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 10
+  score: 40
   itemName: Cup
 --- !u!54 &-4679786968298270983
 Rigidbody:
