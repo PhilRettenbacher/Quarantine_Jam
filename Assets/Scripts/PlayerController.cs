@@ -7,23 +7,24 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
     public float rotationSpeed;
-    public Canvas HUD, PAUSE;
+    public Canvas HUD, PAUSE,List;
     public GameObject Character;
     public float Max_Stamina, Stamina;
-    bool pause = false;
+    bool pause = false,list = false;
     Animator Player;
     public Transform Body;
 
     bool run = false, Shift = false,elab = false,done=false;
 
     Rigidbody rb;
-
+    
     // Start is called before the first frame update
     void Start()
     {
+
         HUD.gameObject.SetActive(true);
         PAUSE.gameObject.SetActive(false);
-
+        List.gameObject.SetActive(false);
         Stamina = Max_Stamina;
         rb = gameObject.GetComponent<Rigidbody>();
         Player = Character.GetComponent<Animator>();
@@ -32,16 +33,42 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !pause)
         {
-            
+            pause = true;
             HUD.gameObject.SetActive(false);
             PAUSE.gameObject.SetActive(true);
             Cursor.visible = true;
             Time.timeScale = 0;
             
         }
-        
+        if(!PAUSE.gameObject.active && pause)
+        {
+            pause = false;
+        }
+            
+
+        if (Input.GetKeyDown(KeyCode.Tab) && !list && !pause)
+        {
+            list = true;
+            List.gameObject.SetActive(true);
+            HUD.gameObject.SetActive(true);
+            PAUSE.gameObject.SetActive(false);
+            Cursor.visible = true;
+            Time.timeScale = 1;
+
+        }
+        else if (Input.GetKeyDown(KeyCode.Tab) && list && !pause)
+        {
+            list = false;
+            List.gameObject.SetActive(false);
+            HUD.gameObject.SetActive(true);
+            PAUSE.gameObject.SetActive(false);
+            Cursor.visible = false;
+            
+
+        }
+
 
         if (Input.GetKey(KeyCode.LeftShift) && Stamina >0)
         {
