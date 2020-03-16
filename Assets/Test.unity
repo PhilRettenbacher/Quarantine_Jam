@@ -2233,7 +2233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerStarted: 0
-  maxTime: 50
+  maxTime: 120
   countDownText: {fileID: 1663128599}
   slider: {fileID: 1354980198}
 --- !u!114 &536817974
